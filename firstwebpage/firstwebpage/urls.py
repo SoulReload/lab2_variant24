@@ -1,10 +1,11 @@
 from django.contrib import admin
 from django.urls import path
-
 from flatpages import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # The original root URL first returned plain text in the early lab stage.
+    # The /stage1/ route preserves that historical stage after / becomes HTML.
     path("", views.home, name="home"),
     path("stage1/", views.initial_text_stage, name="initial_text_stage"),
     path("hello/", views.hello, name="hello"),

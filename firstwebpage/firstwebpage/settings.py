@@ -1,12 +1,13 @@
-"""Settings for the educational firstwebpage project."""
+"""Settings for the educational financial-reporting web page."""
 import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Local-only fallback. Set DJANGO_SECRET_KEY in the environment for a deployment.
 SECRET_KEY = os.environ.get(
     "DJANGO_SECRET_KEY",
-    "lab2-local-development-key-not-for-production",
+    "lab2-financial-reporting-local-placeholder-not-for-production",
 )
 DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
@@ -32,7 +33,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "firstwebpage.urls"
-
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -48,7 +48,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = "firstwebpage.wsgi.application"
 ASGI_APPLICATION = "firstwebpage.asgi.application"
 
@@ -59,18 +58,11 @@ DATABASES = {
     }
 }
 
-AUTH_PASSWORD_VALIDATORS = [
-    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
-]
-
 LANGUAGE_CODE = "ru-ru"
 TIME_ZONE = "Europe/Moscow"
 USE_I18N = True
 USE_TZ = True
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "flatpages" / "static"]
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

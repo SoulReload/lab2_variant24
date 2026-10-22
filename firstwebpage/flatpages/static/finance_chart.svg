@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30" viewBox="0 0 90 30" role="img" aria-label="Мини-график">
-  <rect width="90" height="30" rx="3" fill="#ffffff" fill-opacity="0.75"/>
-  <path d="M5 23 L22 17 L36 20 L53 9 L68 13 L84 4" fill="none" stroke="#146c60" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="84" cy="4" r="2.5" fill="#146c60"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="30" viewBox="0 0 120 30" role="img" aria-labelledby="title desc">
+  <title id="title">Динамика финансовых показателей</title>
+  <desc id="desc">Условный график из трёх столбцов и линии роста</desc>
+  <rect width="120" height="30" rx="3" fill="#ffffff" fill-opacity="0.65"/>
+  <rect x="8" y="15" width="8" height="10" fill="#167d63"/>
+  <rect x="22" y="10" width="8" height="15" fill="#167d63"/>
+  <rect x="36" y="5" width="8" height="20" fill="#167d63"/>
+  <polyline points="7,12 22,7 36,9 50,3" fill="none" stroke="#1d4e89" stroke-width="2"/>
+  <text x="58" y="19" font-family="Arial, sans-serif" font-size="9" fill="#333333">Финансы</text>
 </svg>

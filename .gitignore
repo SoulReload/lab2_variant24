@@ -1,4 +1,4 @@
-# Python cache
+# Python bytecode/cache
 __pycache__/
 *.py[cod]
 
@@ -9,7 +9,7 @@ env/
 **/.venv/
 **/venv/
 
-# Local databases
+# Local databases (the project's SQLite file has no extension)
 db_project_name
 **/db_project_name
 db.sqlite3
@@ -18,13 +18,13 @@ db.sqlite3
 *.sqlite3
 *.db
 
-# Secrets and environment files
+# Environment files/secrets
 .env
 .env.*
 **/.env
 **/.env.*
 
-# Generated and local files
+# Local editor/OS/generated files
 *.log
 staticfiles/
 media/
